@@ -3,15 +3,16 @@ const cors = require("cors");
 let dotenv = require("dotenv").config("./.env");
 
 const app = express();
-app.use(
-	cors({
-		origin: [
-			"http://localhost:3000",
-			"http://192.168.0.100:3000",
-			"http://localhost:3000/upload/single",
-		],
-	})
-);
+app.use(cors());
+// app.use(
+// 	cors({
+// 		origin: [
+// 			"http://localhost:3000",
+// 			"http://192.168.0.100:3000",
+// 			"http://localhost:3000/upload/single",
+// 		],
+// 	})
+// );
 
 const imageController = require("./controller/image.controller");
 
