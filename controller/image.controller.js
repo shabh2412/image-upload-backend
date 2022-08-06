@@ -55,6 +55,10 @@ imageController.post("/single", upload.single("image"), async (req, res) => {
 	res.send([re.data]);
 });
 
+imageController.get("/single", (req, res) => {
+	res.send("single");
+});
+
 imageController.post("/multiple", upload.array("images"), async (req, res) => {
 	let images = [];
 	for (let image of req.files) {
